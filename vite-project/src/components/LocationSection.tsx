@@ -8,7 +8,7 @@
 // ========================================
 const WHATSAPP_NUMBER = "628989419121" // Format: country code + number
 const WHATSAPP_MESSAGE = "Halo, saya ingin pesan Mie Jebew!"
-const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Grand+Depok+City+Mie+Jebew"
+const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/Mie+Jebew+-+Grand+Depok+City/@-6.414305,106.8215852,17z/data=!3m1!4b1!4m6!3m5!1s0x2e69eba5c1f2a2c3:0xe0f1e2157a6038d8!8m2!3d-6.4143104!4d106.8264561!16s%2Fg%2F11mdq19djs"
 
 export function LocationSection() {
     // WhatsApp handler
@@ -39,7 +39,7 @@ export function LocationSection() {
                                 Temukan Pedasnya <span className="text-primary">Di Sini</span>
                             </h2>
                             <p className="text-text-muted dark:text-gray-400 text-lg leading-relaxed max-w-lg">
-                                Rasakan sensasi pedas nendang di outlet kami. Tempat yang nyaman untuk menikmati mie pedas, kebab, dan lumpia beef favoritmu.
+                                Rasakan sensasi pedas bikin Bibir Jebew di outlet kami. Tempat yang nyaman untuk menikmati Mie pedas, Kebab, dan Lumpia Beef favoritmu.
                             </p>
                         </div>
 
@@ -53,7 +53,7 @@ export function LocationSection() {
                                 <div className="flex flex-col gap-1">
                                     <h3 className="text-base font-bold text-text-main dark:text-white">Alamat Lengkap</h3>
                                     <p className="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
-                                        Jl. Grand Depok City, Tirtajaya, Kec. Sukmajaya, Kota Depok, Jawa Barat 16412
+                                        Jl. Haji Sikih No.32, RT.06/RW.03, Tirtajaya, Sukmajaya, Kota Depok 16412
                                     </p>
                                 </div>
                             </div>
@@ -105,21 +105,28 @@ export function LocationSection() {
                     </div>
 
                     {/* Right Column: Map Visual */}
-                    <div
-                        onClick={handleDirections}
-                        className="relative order-1 lg:order-2 h-[300px] lg:h-auto min-h-[400px] w-full overflow-hidden rounded-[2.5rem] shadow-2xl shadow-gray-200 dark:shadow-black/50 group cursor-pointer"
-                    >
-                        {/* Map Background */}
+                    <div className="relative order-1 lg:order-2 h-[300px] lg:h-auto min-h-[400px] w-full overflow-hidden rounded-[2.5rem] shadow-2xl shadow-gray-200 dark:shadow-black/50">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.055310619806!2d106.8238814749918!3d-6.414310393576629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eba5c1f2a2c3%3A0xe0f1e2157a6038d8!2sMie%20Jebew%20-%20Grand%20Depok%20City!5e0!3m2!1sen!2sid!4v1709123456789!5m2!1sen!2sid"
+                            width="100%"
+                            height="100%"
+                            style={{ border: 0, minHeight: '400px' }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Map of Mie Jebew GDC"
+                            className="w-full h-full grayscale-[20%] hover:grayscale-0 transition-all duration-500"
+                        ></iframe>
+
+                        {/* Overlay Gradient (Optional, slightly turned down for visibility) */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+
+                        {/* Map Pin Element - Restored */}
                         <div
-                            className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                            style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuANDJkMlQWP5aObJyPtkBrbYhBBk3YljIN6ynJmECZa02Z0bNqx6kspeLhp6IVpC-pb03cZtwqCCi-t4FuT-p53olth-l1gfyeaGB5b5CGwSNQb7TNcQTutLEQCNuAmkNlWCdAOd0L3oqE4KxiJUxTAdJvEUCxWByWXF63zv4CXKMmTq_5kn4Na1Zh9Cy9PSFAgrmVI13b_UTXkMZAW4lsjDbdAjCDV9pC4LMdyxRtcyxB2y0MZca8MRxEEzn6MUPYJWAsXdNlJB20')" }}
-                        />
-
-                        {/* Overlay Gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60" />
-
-                        {/* Map Pin Element */}
-                        <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center drop-shadow-lg animate-bounce" style={{ animationDuration: "2s" }}>
+                            onClick={handleDirections}
+                            className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center drop-shadow-lg animate-bounce pointer-events-auto cursor-pointer hover:scale-110 transition-transform"
+                            style={{ animationDuration: "2s" }}
+                        >
                             <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white shadow-xl ring-4 ring-white dark:ring-background-dark">
                                 <span className="material-symbols-outlined text-4xl">restaurant</span>
                             </div>
@@ -128,24 +135,6 @@ export function LocationSection() {
                             </div>
                             {/* Triangle pointer */}
                             <div className="h-3 w-3 -translate-y-2 rotate-45 bg-white dark:bg-background-dark" />
-                        </div>
-
-                        {/* Map Controls Simulation */}
-                        <div className="absolute bottom-6 right-6 flex flex-col gap-2">
-                            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white shadow-md text-gray-600 hover:text-primary transition-colors">
-                                <span className="material-symbols-outlined text-xl">add</span>
-                            </div>
-                            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white shadow-md text-gray-600 hover:text-primary transition-colors">
-                                <span className="material-symbols-outlined text-xl">remove</span>
-                            </div>
-                        </div>
-
-                        {/* Map Badge */}
-                        <div className="absolute top-6 left-6">
-                            <div className="flex items-center gap-2 rounded-lg bg-white/90 backdrop-blur-sm px-3 py-2 shadow-md">
-                                <span className="material-symbols-outlined text-primary">map</span>
-                                <span className="text-xs font-bold text-gray-800">Klik untuk buka Maps</span>
-                            </div>
                         </div>
                     </div>
                 </div>
