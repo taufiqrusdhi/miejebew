@@ -20,7 +20,7 @@ export function Hero() {
                         </span>
                     </h1>
                     <p className="text-lg md:text-xl text-text-muted dark:text-gray-300 max-w-lg leading-relaxed">
-                        Saatnya rasain sendiri pedas <span className="text-primary font-bold">Otentik</span> yang bikin ketagihan dan susah move on. <br className="hidden md:block" /> Nikmatnya selalu siap nemenin kapan pun kamu butuh!
+                        Saatnya rasain sendiri pedas Otentik yang bikin ketagihan dan susah move on. Nikmatnya selalu siap nemenin kapan pun kamu butuh!
                     </p>
 
                     <div className="flex items-center gap-4 mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 w-full max-w-md">
