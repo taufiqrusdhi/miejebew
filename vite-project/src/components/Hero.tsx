@@ -25,9 +25,9 @@ export function Hero() {
 
                     <div className="flex items-center gap-4 mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 w-full max-w-md">
                         <div className="flex -space-x-3">
-                            <img alt="Happy customer 1" className="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1UlDspWiUJADNLgD1JwnLbtaYZjuwnRdtZkLAUapFb3TuIXE0awjil9-cIPiGYZldqOSyzStUtKmMZZp7Qre1ChNDj5l_3HzWEUNiJdkqxG7FmUcmaj_WtNpgkMmGKztjr54kzSvyO-bIaUwkyuPNcNM-HTlBib3uhP81aAfKQXl3qk5ZAnHnaMN3mIGD8iYwkL1D9MoZxcOwznQW_frsHem7YjIFAJsOrDTU4WE91LlJyWHiMUKCses7IRfO7wwfMUeaibEmC1G9sk9X5syMjH1-eVMXqfp8pVxusQtr4T8P2iJ0tIJ-zE40" />
-                            <img alt="Happy customer 2" className="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn-8OJVq83xXDYpuyvAjU7v4gykACddZOlsFmkewFrfcCYYZaVnECwHaIHctX7cQtHnay2bbKC88qwUFTs5JLy3TezPO4Y0_0aY5Jqhi1tiKse8cz4mcXr0c82M32iB23myTNsLHCN3ltdrQd2cJW1upP8rBT8gd3DRONgeWqlA1FitaTfFh6iif3a-t3SqEl3QFqD-etvhDoJlIhESLiK6GfFmUcmaj_WtNpgkMmGKztjr54kzSvyO-bIaUwkyuPNcNM-HTlBib3uhP81aAfKQXl3qk5ZAnHnaMN3mIGD8iYwkL1D9MoZxcOwznQW_frsHem7YjIFAJsOrDTU4WE91LlJyWHiMUKCses7IRfO7wwfMUeaibEmC1G9sk9X5syMjH1-eVMXqfp8pVxusQtr4T8P2iJ0tIJ-zE40" />
-                            <img alt="Happy customer 3" className="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvOOeDlP00emOMRYlAez-HaxUAaDuUTWOMmlV4gtjNwSJWlU45hwKM2pV_OhdO1bE83uFSMkKJ2IpqPCMGztjr54kzSvyO-bIaUwkyuPNcNM-HTlBib3uhP81aAfKQXl3qk5ZAnHnaMN3mIGD8iYwkL1D9MoZxcOwznQW_frsHem7YjIFAJsOrDTU4WE91LlJyWHiMUKCses7IRfO7wwfMUeaibEmC1G9sk9X5syMjH1-eVMXqfp8pVxusQtr4T8P2iJ0tIJ-zE40" />
+                            <img alt="Happy customer 1" className="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=100&auto=format&fit=crop" />
+                            <img alt="Happy customer 2" className="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=100&auto=format&fit=crop" />
+                            <img alt="Happy customer 3" className="w-10 h-10 rounded-full border-2 border-white dark:border-background-dark object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=100&auto=format&fit=crop" />
                             <div className="w-10 h-10 rounded-full bg-accent-yellow flex items-center justify-center text-xs font-bold border-2 border-white dark:border-background-dark text-text-main">+2k</div>
                         </div>
                         <div className="flex flex-col">
@@ -46,7 +46,7 @@ export function Hero() {
                     <div className="absolute inset-0 bg-gradient-radial from-primary/20 to-transparent opacity-50 blur-2xl"></div>
                     {/* Using a circular mask for dynamic feel */}
                     <div className="relative w-full max-w-[500px] aspect-square rounded-full border-8 border-white/50 dark:border-white/10 shadow-2xl overflow-hidden animate-float">
-                        <img alt="Spicy noodle bowl with chopsticks" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="/hero-image-new.jpg" />
+                        <img alt="Spicy noodle bowl with chopsticks" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" src={`${import.meta.env.BASE_URL}hero-image-new.jpg`} />
                     </div>
                     {/* Floating Badge */}
                     <div className="absolute bottom-10 -left-4 md:left-10 bg-white dark:bg-surface-dark p-4 rounded-xl shadow-lg flex items-center gap-3 animate-bounce-slow">
