@@ -39,7 +39,7 @@ const TEAM_MEMBERS = [
         name: 'Rania Putri Amalia, S.Psi',
         positionTop: 'Founder',
         positionBottom: 'Chief Executive Officer',
-        image: `${import.meta.env.BASE_URL}images/rania.jpg`,
+        image: 'https://i.ibb.co/4nxKsT2V/RANIA.jpg',
         socials: {
             instagram: 'https://instagram.com/rania.putri',
             facebook: 'https://facebook.com/rania.putri',
@@ -50,7 +50,7 @@ const TEAM_MEMBERS = [
         name: 'Taufiq Rusdhi, S.M.',
         positionTop: 'Co-Founder',
         positionBottom: 'Chief Operation Officer',
-        image: `${import.meta.env.BASE_URL}images/taufiq.jpg`,
+        image: 'https://i.ibb.co/Wv5ysxCm/TAUFIQ.jpg',
         socials: {
             instagram: 'https://instagram.com/taufiq.rusdhi',
             facebook: 'https://facebook.com/taufiq.rusdhi',
@@ -130,7 +130,7 @@ export function AboutSection() {
                             <div
                                 className="absolute inset-0 w-full h-full bg-cover bg-center transition-all duration-1000 ease-in-out transform group-hover:scale-110"
                                 style={{
-                                    backgroundImage: `url('${import.meta.env.BASE_URL}images/shop-1.jpg')`,
+                                    backgroundImage: `url('https://i.ibb.co/RTZKs7RP/OUTLET-1.jpg')`,
                                     animation: "fade-slide-1 12s infinite",
                                     filter: "brightness(1.15) contrast(1.1) saturate(1.2)"
                                 }}
@@ -138,7 +138,7 @@ export function AboutSection() {
                             <div
                                 className="absolute inset-0 w-full h-full bg-cover bg-center transition-all duration-1000 ease-in-out transform group-hover:scale-110"
                                 style={{
-                                    backgroundImage: `url('${import.meta.env.BASE_URL}images/shop-2.jpg')`,
+                                    backgroundImage: `url('https://i.ibb.co/HLBXQsKj/OUTLET-2.jpg')`,
                                     animation: "fade-slide-2 12s infinite",
                                     opacity: 0,
                                     filter: "brightness(1.15) contrast(1.1) saturate(1.2)"
@@ -147,7 +147,7 @@ export function AboutSection() {
                             <div
                                 className="absolute inset-0 w-full h-full bg-cover bg-center transition-all duration-1000 ease-in-out transform group-hover:scale-110"
                                 style={{
-                                    backgroundImage: `url('${import.meta.env.BASE_URL}images/shop-3.jpg')`,
+                                    backgroundImage: `url('https://i.ibb.co/LhSj6yhm/OUTLET-3.jpg')`,
                                     animation: "fade-slide-3 12s infinite",
                                     opacity: 0,
                                     filter: "brightness(1.15) contrast(1.1) saturate(1.2)"
